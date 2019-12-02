@@ -110,7 +110,7 @@ class doppelfind(procdump.ProcDump):
 
             # Skip to the next vad if there is not file object or if the file
             # object isn't an IMAGE FILE
-            if file_name and vad.u.VadFlags.VadType.v() == IMAGE_FILE_TYPE:
+            if file_name and vad.VadFlags.VadType.v() == IMAGE_FILE_TYPE:
 
                 # Take only the process's image file - the include dll should be false
                 # and the file object's path is part of the process's full path
